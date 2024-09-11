@@ -1,0 +1,13 @@
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'nasa-blue': '#0B3D91',
+        'nasa-red': '#FFC107',
+        'nasa-gray': '#F7F7F7',
+        'nasa-black': '#000000',
+        'nasa-white': '#FFFFFF',
+},
+},
+},
+}

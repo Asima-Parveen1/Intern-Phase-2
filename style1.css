@@ -1,0 +1,156 @@
+header{
+    /* background: linear-gradient(135deg, rgba(0,0,0,1),rgba(0,0,0,0.2)), */
+    background: #fff
+    url('img1.webp') ;
+    min-height: 100vh;
+    background-size: cover;
+}
+header nav{
+    padding: 20px 40px 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+header nav .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav .navbar a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    margin-right: 30px;
+}
+header nav .navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s ease-in-out;
+}
+header nav .navbar a:hover:after{
+width: 70%;
+}
+header nav .navbar a.active:after{
+    width: 70%;
+}
+header nav .navbar .search{
+background:var(--dark);
+display: flex;
+align-items: center;
+padding: 10px 15px;
+border-radius: 50px;
+}
+header nav .navbar .search input{
+background:transparent;
+border: none;
+outline: none;
+font-size: 16px;
+color:black;
+
+}
+header nav .navbar .search i{
+    padding-right: 16px;
+    color: black;
+}
+.links div{
+    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  animation:movin 3s ease-in-out forwards ;
+}
+@keyframes movin{
+    from{
+transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+.links i{
+    color: black;
+}
+.links div:hover i{
+   transition: all 0.5s ease-in-out;
+    color: white;
+}
+.links div:hover{
+    background-color: black;
+}
+.hero{
+    position: relative;
+}
+.links{
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-right: 1px solid gray;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
+}
+.hero .cta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 80px);
+   
+     margin: auto;
+        max-width: 80%;
+        width: 1460px;
+    
+}
+
+.left{
+    color: black;
+}
+.hero .cta h1{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.hero .cta div{
+flex: 1;
+}
+.hero .cta .left{
+    padding: 0px 60px 0px 30px;
+
+}
+.hero .cta .right img{
+    height: 60vh;
+    transform: rotate(20deg);
+    animation: moveinsapce 5s ease-in-out infinite alternate ;
+}
+@keyframes moveinsapce{
+    50%{
+        transform: translateY(100px) rotate(-30deg) scale(0.8);
+    }
+}
+.cta .left button{
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600px;
+    border: none;
+    outline: none;
+}
+.cta .left button:hover{
+    background-color: black;
+    color: white;
+    transition: 2s;
+}
+
